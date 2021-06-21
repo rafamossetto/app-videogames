@@ -1,0 +1,22 @@
+.form {
+    margin: auto;
+}
+
+.input {
+    font-family: 'Press Start 2P', cursive;
+    width: 15rem;
+    height: 22px;
+    background:#161616;
+    color:white;
+    font-size:15px;
+}
+
+.search {
+    font-family: 'Press Start 2P', cursive;
+    height: 26px;
+    background: #696565;
+    color:#000000
+}
+.search:hover {
+    color:#ffffff;
+}

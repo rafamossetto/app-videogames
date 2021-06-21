@@ -1,0 +1,41 @@
+.game {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 0.8rem;
+    margin-right: 8px;
+    margin-left: 8px;
+    margin-top: 8px;
+    width: 14rem;
+    position: relative;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: rgba(255, 255, 255, 0.4);
+    background-clip: border-box;
+    border: 1px solid rgba(0,0,0,.125);
+    border-radius: .25rem;
+}
+.title {
+    margin-bottom: 10px;
+}
+.genres {
+    /* font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif ; */
+    margin: 2px 0px 0px 0px; 
+    font-size: 12px;
+}
+.image {
+    width: 150px;
+    height: 85px;
+}
+
+.rating {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 10px;
+    float:right;
+}
+.link {
+    text-decoration: none;
+    color:inherit;
+}

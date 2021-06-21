@@ -1,0 +1,46 @@
+.gamedetail {
+    background-image: url('https://wallpaperaccess.com/full/2825801.gif');
+    padding-left: 0;
+    padding-right: 0;
+    height: 100%;
+    width: 100%;
+    background-size:cover;
+    background-position:center center;
+    background-repeat: no-repeat;
+    position:absolute;
+    text-align:center;
+}
+
+.wrapper {
+    height: 578px;
+    text-align: center;
+    padding-top: 10px;
+}
+
+.container {
+    background: rgba(255, 255, 255, 0.4);;
+    margin: auto;
+    width: 800px;
+    height: 590px;
+    border-radius: 10%;
+}
+.name {
+    font-family: 'Press Start 2P';
+    font-size: 12px;
+    padding-top: 5px;
+}
+.description {
+    font-size: 12px;
+    font-weight:500 ;
+}
+.image {
+    width: 300px;    
+    height: 200px;
+    border-radius: 5%;
+}
+
+.genres {
+    display:inline-block;
+    margin-right:50px;
+    margin-left:50px;
+}

@@ -1,0 +1,72 @@
+.creategame {
+    background-image: url('https://wallpaperaccess.com/full/2825801.gif');
+    padding-left: 0;
+    padding-right: 0;
+    height: 100%;
+    width: 100%;
+    background-size:cover;
+    background-position:center center;
+    background-repeat: no-repeat;
+    position:absolute;
+    text-align:center;
+    font-weight: 600;
+}
+
+.wrapper {
+    height: 578px;
+    text-align: center;
+    padding-top: 5px;
+}
+
+.container {
+    background: rgba(255, 255, 255, 0.4);;
+    margin: auto;
+    width: 800px;
+    height: 590px;
+    border-radius: 10%;
+}
+
+.title {
+    font-size: 23px;
+    margin: 0px;
+    padding: 0px;
+}
+
+.textarea {
+    max-height: 100px;
+    max-width:200px;
+    min-height:50px;
+}
+
+.genresContainer {
+    font-size: 13px;
+    display:inline-flex;
+    flex-direction: column;
+    align-items: flex-start;
+    font-weight: 600;
+}
+
+.labelTitle {
+    font-size: 19px;
+}
+.divgenre {
+    display:inline-block;
+}
+
+.platformsContainer {
+    font-size: 13px;
+    display:inline-flex;
+    flex-direction: column;
+    align-items: flex-start;
+    font-weight: 600;
+}
+
+.btn {
+    font-family: 'Press Start 2P';
+    font-weight: bold;
+    padding:8px;    
+}
+
+.error {
+    border: 2px solid red;
+}
