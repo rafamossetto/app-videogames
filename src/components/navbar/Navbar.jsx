@@ -57,9 +57,11 @@ function Navbar() {
                                 exact
                                 to='/videogames'
                                 className="nav-links"
+                                activeClassName='nav-links'
                                 onClick={() => {
                                     handleClick();
-                                    alert('Coming soon..');}}
+                                    alert('Coming soon..');
+                                }}
                             >
                                 Favorites
                             </NavLink>
@@ -69,9 +71,11 @@ function Navbar() {
                                 exact
                                 to='/videogames'
                                 className="nav-links"
+                                activeClassName='nav-links'
                                 onClick={() => {
                                     handleClick();
-                                    alert('Under construction!');}}
+                                    alert('Under construction!');
+                                }}
                             >
                                 About
                             </NavLink>
