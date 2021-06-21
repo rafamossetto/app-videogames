@@ -55,6 +55,7 @@ function Navbar() {
                         <li className="nav-item">
                             <NavLink
                                 exact
+                                to='/videogames'
                                 activeClassName="active"
                                 className="nav-links"
                                 onClick={() => alert('Coming soon..')}
@@ -65,9 +66,10 @@ function Navbar() {
                         <li className="nav-item">
                             <NavLink
                                 exact
+                                to='/videogames'
                                 activeClassName="active"
                                 className="nav-links"
-                                onClick={() => alert('Under construction!')}
+                                onClick={() => {alert('Under construction!')}}
                             >
                                 About
                             </NavLink>
