@@ -55,10 +55,9 @@ function Navbar() {
                         <li className="nav-item">
                             <NavLink
                                 exact
-                                to="/Favorites"
                                 activeClassName="active"
                                 className="nav-links"
-                                onClick={handleClick}
+                                onClick={() => alert('Coming soon..')}
                             >
                                 Favorites
                             </NavLink>
@@ -66,10 +65,9 @@ function Navbar() {
                         <li className="nav-item">
                             <NavLink
                                 exact
-                                to="/about"
                                 activeClassName="active"
                                 className="nav-links"
-                                onClick={handleClick}
+                                onClick={() => alert('Under construction!')}
                             >
                                 About
                             </NavLink>
