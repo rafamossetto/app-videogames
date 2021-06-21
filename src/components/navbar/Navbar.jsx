@@ -9,7 +9,7 @@ function Navbar() {
     const dispatch = useDispatch();
     const [input, setInput] = useState('')
     const handleInput = (e) => {
-        // dispatch(filterByName(e.target.value))
+        dispatch(filterByName(e.target.value))
         setInput(e.target.value)
     }
     const handleSearch = (e) => {
