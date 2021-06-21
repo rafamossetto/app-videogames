@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useDispatch } from 'react-redux'
 import { NavLink } from 'react-router-dom';
 import s from './Input.module.css'
-import { searchByName } from '../../redux/actions';
+import { filterByName, searchByName } from '../../redux/actions';
 //Navbar Styles ↓
 import '../../App.css'
 function Navbar() {
