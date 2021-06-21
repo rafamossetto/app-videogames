@@ -56,7 +56,6 @@ function Navbar() {
                             <NavLink
                                 exact
                                 to='/videogames'
-                                activeClassName="active"
                                 className="nav-links"
                                 onClick={() => {
                                     handleClick();
@@ -69,7 +68,6 @@ function Navbar() {
                             <NavLink
                                 exact
                                 to='/videogames'
-                                activeClassName="active"
                                 className="nav-links"
                                 onClick={() => {
                                     handleClick();
