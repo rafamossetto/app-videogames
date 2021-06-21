@@ -3,19 +3,19 @@ import { FILTER_BY_NAME, GET_VIDEOGAMES, FILTER_BY_GENRES, SEARCH_BY_NAME, SORT_
 
 export function getVideogames() {
     return async function (dispatch) {
-        const response = await axios.get('http://localhost:3001/videogames');
+        const response = await axios.get('https://app-videogames.herokuapp.com/videogames');
         dispatch({ type: GET_VIDEOGAMES, payload: response.data });
     }
 }
 export function getVideogameDetail(id) {
     return async function (dispatch) {
-        const response = await axios.get(`http://localhost:3001/videogame/${id}`);
+        const response = await axios.get(`https://app-videogames.herokuapp.com/videogame/${id}`);
         dispatch({ type: GET_VIDEOGAME_DETAIL, payload: response.data });
     }
 }
 export function searchByName(name) {
     return async function (dispatch) {
-        const response = await axios.get(`http://localhost:3001/videogames?name=${name}`);
+        const response = await axios.get(`https://app-videogames.herokuapp.com/videogames?name=${name}`);
         dispatch({ type: SEARCH_BY_NAME, payload: response.data });
     }
 }
