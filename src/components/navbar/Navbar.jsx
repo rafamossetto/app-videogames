@@ -14,6 +14,7 @@ function Navbar() {
     }
     const handleSearch = (e) => {
         e.preventDefault();
+        setInput('');
         dispatch(searchByName(input));
     }
 
@@ -28,7 +29,7 @@ function Navbar() {
                         <i className="fas fa-code"></i>
                     </NavLink>
                     <form className={s.form} >
-                        <input onChange={handleInput} className={s.input} type="text" placeholder='Search games' spellCheck='false' />
+                        <input onChange={handleInput} value={input} className={s.input} type="text" placeholder='Search games' spellCheck='false' />
                         <button onClick={handleSearch} className={s.search}>Search</button>
                     </form>
                     <ul className={click ? "nav-menu active" : "nav-menu"}>
