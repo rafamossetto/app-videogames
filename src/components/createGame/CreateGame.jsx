@@ -79,7 +79,7 @@ function CreateGame() {
         if (Object.values(errors).length){
             return alert(Object.values(errors).join('\n'));
         }
-        axios.post('http://localhost:3001/videogame', form)
+        axios.post('https://app-videogames.herokuapp.com/videogame', form)
         alert(`${form.name} created succesfully`)
     }
     return (
