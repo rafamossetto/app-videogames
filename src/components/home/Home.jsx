@@ -16,7 +16,12 @@ function Home() {
     const indexOfLastGame = currentPage * gamesPerPage; // 15
     const indexOfFirstGame = indexOfLastGame - gamesPerPage; // 15 - 15
     const currentGames = videogames?.slice(indexOfFirstGame, indexOfLastGame);
-    
+
+    useEffect(() => {
+        const getGenres = async () => await axios.get('http://localhost:3001/genres');
+        getGenres();
+    }, [])
+
     const paginate = pageNumber => setCurrentPage(pageNumber);
     return (
         <main className={s.background}>
