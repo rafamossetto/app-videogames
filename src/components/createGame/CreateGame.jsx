@@ -58,15 +58,14 @@ function CreateGame() {
         let errors = {};
         if (!form.name) {
             errors.name = 'Game Name is required';
-        } else if (!/^\w{4,}$/.test(form.name)) {
+        } else if (form.name.length < 4) {
             errors.name = 'Game Name must have at least 4 characters';
         }
         if (!form.description) {
             errors.description = 'Description is required';
-        } else if (!/^\w{8,}$/.test(form.description)) {
+        } else if (form.description.length < 8) {
             errors.description = 'Description must have at least 8 characters'
         }
-        if (!form.releaseDate) errors.releaseDate = 'Release Date is required';
         if (!form.rating){
             errors.rating = 'Rating is required';
         } else if (!/^[1-5]$/.test(form.rating)){
@@ -80,8 +79,8 @@ function CreateGame() {
         if (Object.values(errors).length){
             return alert(Object.values(errors).join('\n'));
         }
-        axios.post('https://app-videogames.herokuapp.com/videogame', form)
-        alert(`Game created succesfully: ${form.name}`)
+        axios.post('http://localhost:3001/videogame', form)
+        alert(`${form.name} created succesfully`)
     }
     return (
         <div className={s.creategame}>

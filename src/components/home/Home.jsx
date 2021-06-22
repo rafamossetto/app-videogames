@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useSelector } from 'react-redux';
 import s from './Home.module.css';
 import Navbar from '../navbar/Navbar.jsx';
@@ -7,6 +7,7 @@ import Filters from '../filters/Filters';
 import Game from '../games/Game';
 import Loading from '../loading/Loading';
 import { useState } from 'react';
+import axios from 'axios';
 
 function Home() {
     const videogames = useSelector(state => state.videogames);
