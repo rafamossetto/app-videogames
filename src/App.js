@@ -21,7 +21,7 @@ function App() {
     document.body.style.background = 'black'
     return (
       <div id='mobilediv'>
-      <h1>Proximamente version para celulares...</h1>
+        <h1>Proximamente version para celulares...</h1>
       </div>
     )
   }
