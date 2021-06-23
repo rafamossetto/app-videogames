@@ -81,6 +81,8 @@ function CreateGame() {
         }
         axios.post('https://app-videogames.herokuapp.com/videogame', form)
         alert(`${form.name} created succesfully`)
+        window.location.href = 'https://app-videogames.herokuapp.com/videogames'
+
     }
     return (
         <div className={s.creategame}>
