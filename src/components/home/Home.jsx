@@ -19,7 +19,7 @@ function Home() {
     const currentGames = videogames?.slice(indexOfFirstGame, indexOfLastGame);
 
     useEffect(() => {
-        const getGenres = async () => await axios.get('http://localhost:3001/genres');
+        const getGenres = async () => await axios.get('https://app-videogames.herokuapp.com/genres');
         getGenres();
     }, [])
 
