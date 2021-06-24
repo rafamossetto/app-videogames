@@ -80,7 +80,8 @@ function CreateGame() {
         if (Object.values(errors).length || checkboxsErrors.length) {
             return alert(Object.values(errors).concat(checkboxsErrors).join('\n'));
         }
-        axios.post('https://app-videogames.herokuapp.com/videogame', form);
+        axios.post('https://app-videogames.herokuapp.com/videogame', form)
+        console.log(form)
         alert(`${form.name} created succesfully`);
         window.location.href = 'https://app-videogames.vercel.app/videogames';
     }
