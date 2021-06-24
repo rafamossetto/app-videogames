@@ -4,11 +4,11 @@ import Navbar from '../navbar/Navbar'
 import axios from 'axios';
 
 function CreateGame() {
-    const [errors, setErrors] = useState({});
+    const [errors, setErrors] = useState({ form: 'Must complete the form' });
     const [form, setForm] = useState({
         name: '',
         description: '',
-        releaseDate: undefined,
+        date: '',
         rating: 0,
         genres: [],
         platforms: []
@@ -16,38 +16,36 @@ function CreateGame() {
 
     const handleChange = e => {
         if (e.target.parentNode.parentNode.id === 'genres') {
-            !e.target.checked ? setForm({
-                ...form,
-                genres: form.genres.filter(x => e.target.value !== x)
-            }) : setForm({
-                ...form,
-                genres: form.genres.concat(e.target.value)
-            })
+            if (e.target.checked) {
+                setForm(prevState => ({
+                    ...prevState,
+                    genres: form.genres.concat(e.target.value)
+                }))
+            } else {
+                setForm(prevState => ({
+                    ...prevState,
+                    genres: form.genres.filter(x => e.target.value !== x)
+                }))
+            }
         }
         if (e.target.parentNode.parentNode.id === 'platforms') {
-            !e.target.checked ? setForm({
-                ...form,
-                platforms: form.platforms.filter(x => e.target.name !== x)
-            }) : setForm({
-                ...form,
-                platforms: form.platforms.concat(e.target.name)
-            })
+            if (e.target.checked) {
+                setForm(prevState => ({
+                    ...prevState,
+                    platforms: form.platforms.concat(e.target.name)
+                }))
+            } else {
+                setForm(prevState => ({
+                    ...prevState,
+                    platforms: form.platforms.filter(x => e.target.name !== x)
+                }))
+            }
         }
-        switch (e.target.name) {
-            case 'name':
-                setForm({ ...form, name: e.target.value })
-                break;
-            case 'description':
-                setForm({ ...form, description: e.target.value })
-                break;
-            case 'date':
-                setForm({ ...form, releaseDate: e.target.value })
-                break;
-            case 'rating':
-                setForm({ ...form, rating: e.target.value })
-                break;
-            default:
-                break;
+        if (e.target.type !== 'checkbox') {
+            setForm(prevState => ({
+                ...prevState,
+                [e.target.name]: e.target.value
+            }))
         }
         setErrors(validate({
             ...form,
@@ -66,9 +64,9 @@ function CreateGame() {
         } else if (form.description.length < 8) {
             errors.description = 'Description must have at least 8 characters'
         }
-        if (!form.rating){
+        if (!form.rating) {
             errors.rating = 'Rating is required';
-        } else if (!/^[1-5]$/.test(form.rating)){
+        } else if (!/^[1-5]$/.test(form.rating)) {
             errors.rating = 'Rating must be between 1 and 5';
         }
         return errors;
@@ -76,14 +74,17 @@ function CreateGame() {
     const handleSubmit = e => {
         e.preventDefault()
         validate(form);
-        if (Object.values(errors).length){
-            return alert(Object.values(errors).join('\n'));
+        let checkboxsErrors = []
+        if (form.genres.length < 1) checkboxsErrors.push('Genres is required');
+        if (form.platforms.length < 1) checkboxsErrors.push('Platforms is required');
+        if (Object.values(errors).length || checkboxsErrors.length) {
+            return alert(Object.values(errors).concat(checkboxsErrors).join('\n'));
         }
-        axios.post('https://app-videogames.herokuapp.com/videogame', form)
-        alert(`${form.name} created succesfully`)
-        window.location.href = 'https://app-videogames.vercel.app/videogames'
-
+        axios.post('https://app-videogames.herokuapp.com/videogame', form);
+        alert(`${form.name} created succesfully`);
+        window.location.href = 'https://app-videogames.vercel.app/videogames';
     }
+
     return (
         <div className={s.creategame}>
             <Navbar />
@@ -101,7 +102,7 @@ function CreateGame() {
                         <br />
                         <label htmlFor="date">Release Date: </label>
                         <br />
-                        <input name='date' className={errors.releaseDate && s.error} type="date" id="date" />
+                        <input name='date' className={errors.releaseDate && s.error} type="date" id="date" required />
                         <br />
                         <label htmlFor="rating">Rating: </label>
                         <br />
