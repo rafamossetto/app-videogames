@@ -8,7 +8,7 @@ function CreateGame() {
     const [form, setForm] = useState({
         name: '',
         description: '',
-        date: '',
+        releaseDate: '',
         rating: 0,
         genres: [],
         platforms: []
@@ -100,9 +100,9 @@ function CreateGame() {
                         <br />
                         <textarea name='description' placeholder='Description...' className={`${errors.description ? s.error : ''} ${s.textarea}`} id="description" cols="30" rows="3" />
                         <br />
-                        <label htmlFor="date">Release Date: </label>
+                        <label htmlFor="releaseDate">Release Date: </label>
                         <br />
-                        <input name='date' className={errors.releaseDate && s.error} type="date" id="date" required />
+                        <input name='releaseDate' className={errors.releaseDate && s.error} type="date" id="date" required />
                         <br />
                         <label htmlFor="rating">Rating: </label>
                         <br />
