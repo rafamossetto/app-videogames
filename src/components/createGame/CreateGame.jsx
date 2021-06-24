@@ -81,9 +81,8 @@ function CreateGame() {
             return alert(Object.values(errors).concat(checkboxsErrors).join('\n'));
         }
         await axios.post('https://app-videogames.herokuapp.com/videogame', form)
-        console.log(form)
         alert(`${form.name} created succesfully`);
-        // window.location.href = 'https://app-videogames.vercel.app/videogames';
+        window.location.href = 'https://app-videogames.vercel.app/videogames';
     }
 
     return (
