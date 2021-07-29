@@ -26,33 +26,17 @@ npm install >> pi-videogames-ft13/client/
 npm start >> pi-videogames-ft13/client/
 ```
 
-## Previews :dog: :cat:
+## Previews 🎮🕹
 
 <p align='left'>
-    <img src='https://github.com/WanCirone/E-Commerce/blob/main/images/home.png' </img>
+    <img src='https://github.com/rafamossetto/rafamossetto/raw/main/screenshots/landing.png' </img>
 </p>
 <p align='left'>
-    <img src='https://github.com/WanCirone/E-Commerce/blob/main/images/catalogo.png' </img>
+    <img src='https://github.com/rafamossetto/rafamossetto/blob/main/screenshots/home.png' </img>
 </p>
 <p align='left'>
-    <img src='https://github.com/WanCirone/E-Commerce/blob/main/images/carrito.png' </img>
+    <img src='https://github.com/rafamossetto/rafamossetto/raw/main/screenshots/game.png' </img>
 </p>
 <p align='left'>
-    <img src='https://github.com/WanCirone/E-Commerce/blob/main/images/average.png' </img>
+    <img src='https://github.com/rafamossetto/rafamossetto/raw/main/screenshots/form.png' </img>
 </p>
-<p align='left'>
-    <img src='https://github.com/WanCirone/E-Commerce/blob/main/images/reviews.png' </img>
-</p>
-<p align='left'>
-    <img src='https://github.com/WanCirone/E-Commerce/blob/main/images/tablaordenes.png' </img>
-</p>
-
-
-## Contribuidores :mortar_board: 
-
-* [Victoria Cabrera](https://github.com/VickyCabrera)
-* [Leandro Alvarez](https://github.com/ElefanteNegro)
-* [Julieta Rubio](https://github.com/JuliRubio)
-* [Facundo Sadava](https://github.com/facusada)
-* [Marcelo Britos](https://github.com/MarceloBritos)
-* [Wanda Cirone](https://github.com/WanCirone)
