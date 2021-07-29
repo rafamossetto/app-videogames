@@ -16,7 +16,7 @@ Proyecto individual realizado como instancia evaluativa en [Soy Henry](https://w
 * __Express__
 * __PostgreSQL / Sequelize__
 
-## Instalación :feet:
+## Instalación 💻
 
 ```
 git clone https://github.com/rafamossetto/pi-videogames-ft13.git
